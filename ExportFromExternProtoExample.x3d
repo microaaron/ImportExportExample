@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "http://www.web3d.org/specifications/x3d-3.2.dtd">
+
+<X3D profile="Immersive" version="3.2">
+  <Scene>
+    <ExternProtoDeclare name='testbox' url="ExportProtoExample.x3d">
+      <field name='translation' type='SFVec3f' accessType='inputOutput'/> 
+    </ExternProtoDeclare>
+    <ProtoInstance DEF="T1" name="testbox">
+    </ProtoInstance>
+    <EXPORT localDEF="T1" AS="rootTransform"/>
+  </Scene>
+</X3D>
