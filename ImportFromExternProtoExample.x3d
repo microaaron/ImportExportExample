@@ -1,0 +1,23 @@
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.2//EN" "http://www.web3d.org/specifications/x3d-3.2.dtd">
+
+<X3D profile="Immersive" version="3.2">
+  <Scene> 
+    <Transform translation="2.5 0 0">
+      <Transform DEF="T2">  
+        <Shape>
+          <Box size="1 1 1"/>
+          <Appearance>
+            <Material diffuseColor="0 0 1"/>
+          </Appearance>
+        </Shape>
+      </Transform>
+    </Transform>
+    <Inline DEF='I1' url="ExportFromExternProtoExample.x3d"/>
+    <IMPORT inlineDEF="I1" importedDEF="rootTransform" AS="I1Root"/>  <!--It doesn't seem to be supported-->
+    <TimeSensor DEF="Timer" cycleInterval="5" loop="true"/>
+    <PositionInterpolator DEF="PI" key="0 0.25 0.5 0.75 1" keyValue="0 0 0, 0.5 0 0, 0 0 0, -0.5 0 0, 0 0 0"/>
+    <ROUTE fromNode="Timer" fromField="fraction_changed" toNode="PI" toField="set_fraction"/>
+    <ROUTE fromNode="PI" fromField="value_changed" toNode="I1Root" toField="set_translation"/>
+    <ROUTE fromNode="PI" fromField="value_changed" toNode="T2" toField="set_translation"/>
+  </Scene>
+</X3D>
