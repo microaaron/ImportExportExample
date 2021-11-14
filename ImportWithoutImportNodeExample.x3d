@@ -20,5 +20,7 @@
     <ROUTE fromNode="Timer" fromField="fraction_changed" toNode="PI" toField="set_fraction"/>
     <ROUTE fromNode="PI" fromField="value_changed" toNode="I1Root" toField="set_translation"/>
     <ROUTE fromNode="PI" fromField="value_changed" toNode="T2" toField="set_translation"/>
+    <Group>
+    </Group>
   </Scene>
 </X3D>
