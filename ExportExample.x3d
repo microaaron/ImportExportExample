@@ -3,6 +3,7 @@
 
 <X3D profile="Immersive" version="3.2">
   <Scene>
+    <Group>
     <Transform DEF="T1">
       <Shape>
         <Box size="1 1 1"/>
@@ -12,5 +13,6 @@
       </Shape>
     </Transform>
     <EXPORT localDEF="T1" AS="rootTransform"/>
+    </Group>
   </Scene>
 </X3D>
